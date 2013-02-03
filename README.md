@@ -1,4 +1,4 @@
-# [Zurb FOundation](https://github.com/zurb/foundation) skeleton for [DocPad](https://github.com/bevry/docpad)
+# [Zurb Foundation](https://github.com/zurb/foundation) skeleton for [DocPad](https://github.com/bevry/docpad)
 Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.
 
 
