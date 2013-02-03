@@ -1,0 +1,49 @@
+{
+  "name": "zurb-foundation.docpad",
+  "version": "0.3.0",
+  "description": "Zurb Foundation skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
+  "homepage": "https://github.com/axyz/zurb-foundation.docpad",
+  "keywords": [
+    "docpad-skeleton",
+    "docpad",
+    "website",
+    "foundation",
+    "zurb foundation"
+  ],
+  "author": "Andrea Moretti <axyzxp@gmail.com>",
+  "maintainers": [
+    "Andrea Moretti <axyzxp@gmail.com>"
+  ],
+  "contributors": [
+    "Andrea Moretti <axyzxp@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/axyz/zurb-foundation.docpad/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/axyz/zurb-foundation.docpad.git"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "docpad": "6.x",
+    "docpad-plugin-cleanurls": "2.x",
+    "docpad-plugin-coffeescript": "2.x",
+    "docpad-plugin-eco": "2.x",
+    "docpad-plugin-sass": "~2.4.2",
+    "docpad-plugin-marked": "2.x",
+    "docpad-plugin-partials": "2.x",
+    "docpad-plugin-stylus": "2.x",
+    "docpad-plugin-text": "2.x",
+    "docpad-plugin-jade": "2.x",
+    "docpad-plugin-related": "2.x",
+    "marked": "*"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x"
+  },
+  "main": "node_modules/docpad/bin/docpad-server"
+}
