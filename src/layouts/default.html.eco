@@ -15,12 +15,12 @@
 </head>
 <body>
 
-<%- @content %>
+	<%- @content %>
 
-<script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
-  '.js><\/script>')
+	<script>
+  	document.write('<script src=' +
+  	('__proto__' in {} ? 'vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
+  	'.js><\/script>')
   </script>
   
   <%- @getBlock("scripts").add(["vendor/foundation/js/foundation.min.js","scripts/script.js"]).toHTML() %>
@@ -62,7 +62,9 @@
   -->
   
   <script>
-    $(document).foundation();
+  	Zepto(function($){
+    	$(document).foundation();
+    })
   </script>
   </body>
 </html>
