@@ -1,8 +1,9 @@
-# The DocPad Configuration File
-# It is simply a CoffeeScript Object which is parsed by CSON
-docpadConfig =
+# DocPad Configuration File
+# http://docpad.org/docs/config
 
-  # Template Data
+# Define the DocPad Configuration
+docpadConfig = {
+	# Template Data
   # =============
   # These are variables that will be accessible via our templates
   # To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
@@ -66,42 +67,7 @@ docpadConfig =
     getPreparedKeywords: ->
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
+}
 
-
-  # DocPad Events
-  # =============
-
-  # Here we can define handlers for events that DocPad fires
-  # You can find a full listing of events on the DocPad Wiki
-  events:
-
-    # Server Extend
-    # Used to add our own custom routes to the server before the docpad routes are added
-    serverExtend: (opts) ->
-      # Extract the server from the options
-      {server} = opts
-      docpad = @docpad
-
-      # As we are now running in an event,
-      # ensure we are using the latest copy of the docpad configuraiton
-      # and fetch our urls from it
-      latestConfig = docpad.getConfig()
-      oldUrls = latestConfig.templateData.site.oldUrls or []
-      newUrl = latestConfig.templateData.site.url
-
-      # Redirect any requests accessing one of our sites oldUrls to the new site url
-      server.use (req,res,next) ->
-        if req.headers.host in oldUrls
-          res.redirect 301, newUrl+req.url
-        else
-          next()
-
-  plugins:
-
-    sass:
-      compass: true
-      requireLibraries: ['modular-scale', 'zurb-foundation']
-
-
-# Export our DocPad Configuration
+# Export the DocPad Configuration
 module.exports = docpadConfig
