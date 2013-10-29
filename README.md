@@ -6,8 +6,6 @@ Simple and flexible HTML, CSS, and Javascript for popular user interface compone
 
 1. [Install DocPad](https://github.com/bevry/docpad)
 
-1. [Install Zurb Foundation ruby gem](https://github.com/zurb/foundation)
-
 1. Clone the project and run the server
 
   ``` bash
