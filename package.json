@@ -1,6 +1,6 @@
 {
   "name": "zurb-foundation.docpad",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Zurb Foundation skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
   "homepage": "https://github.com/axyz/zurb-foundation.docpad",
   "keywords": [
