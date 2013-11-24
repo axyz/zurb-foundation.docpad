@@ -1,70 +1,19 @@
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= @getPreparedTitle() %></title>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title><%= @getPreparedTitle() %></title>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").add(["/styles/app.css", "/styles/style.css"]).toHTML() %>
+  
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
 
-  <%- @getBlock("meta").toHTML() %>
-  <%- @getBlock("styles").add(["/styles/style.css"]).toHTML() %>
+  <body>
+    <%- @content %>
   
-  <script src="vendor/foundation/js/vendor/custom.modernizr.js"></script>
-
-</head>
-<body>
-
-	<%- @content %>
-
-	<script>
-  	document.write('<script src=' +
-  	('__proto__' in {} ? 'vendor/foundation/js/vendor/zepto' : 'vendor/foundation/js/vendor/jquery') +
-  	'.js><\/script>')
-  </script>
-  
-  <%- @getBlock("scripts").add(["vendor/foundation/js/foundation.min.js","scripts/script.js"]).toHTML() %>
-
-  <!--
-  
-  <script src="vendor/foundation/js/foundation/foundation.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.alerts.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.clearing.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.cookie.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.dropdown.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.forms.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.joyride.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.magellan.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.orbit.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.reveal.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.section.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.tooltips.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.topbar.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.interchange.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.placeholder.js"></script>
-  
-  <script src="vendor/foundation/js/foundation/foundation.abide.js"></script>
-  
-  -->
-  
-  <script>
-  	Zepto(function($){
-    	$(document).foundation();
-    })
-  </script>
+    <%- @getBlock("scripts").add(["bower_components/jquery/jquery.min.js", "bower_components/foundation/js/foundation.min.js","scripts/app.js", "scripts/script.js"]).toHTML() %>
   </body>
 </html>
