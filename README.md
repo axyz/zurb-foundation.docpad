@@ -12,6 +12,7 @@ Simple and flexible HTML, CSS, and Javascript for popular user interface compone
   git clone git://github.com/axyz/zurb-foundation.docpad.git
   cd zurb-foundation.docpad
   npm install
+  bower install
   docpad run
   ```
 
