@@ -14,6 +14,6 @@
   <body>
     <%- @content %>
   
-    <%- @getBlock("scripts").add(["bower_components/jquery/jquery.min.js", "bower_components/foundation/js/foundation.min.js","scripts/app.js", "scripts/script.js"]).toHTML() %>
+    <%- @getBlock("scripts").add(["bower_components/jquery/dist/jquery.min.js", "bower_components/foundation/js/foundation.min.js","scripts/app.js", "scripts/script.js"]).toHTML() %>
   </body>
 </html>
